@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>ShopTrack</title></head>
+<body>
+  <h1>ShopTrack</h1>
+  <h2>Products</h2>
+  {% if products %}
+  <ul>
+    {% for p in products %}
+    <li>{{ p.name }} — stock: {{ p.stock }}{% if p.needs_reorder() %} (low stock!){% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No products yet.</p>
+  {% endif %}
+</body>
+</html>
