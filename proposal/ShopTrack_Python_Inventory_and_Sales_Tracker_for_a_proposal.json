@@ -1,0 +1,712 @@
+{
+ "tool": "proposal_tool",
+ "version": "4.11.0",
+ "stage": "proposal",
+ "stageLabel": "Proposal",
+ "stageFills": "The plan: who the system is for, what it will do, how it will be built and checked, and who does what. Nothing is implemented yet: the Delivery and evidence part stays empty.",
+ "saved": "2026-10-26T11:05:17.237Z",
+ "proposal": {
+  "course": "SEN0414",
+  "semester": "2026-2027 Fall",
+  "stage": "proposal",
+  "title": "ShopTrack: Python Inventory and Sales Tracker for a Small Shop in Taif",
+  "team": [
+   {
+    "name": "Malak Alfakavi",
+    "no": "2200002701",
+    "email": "2200002701@stu.iku.edu.tr",
+    "share": "55",
+    "admin": [
+     "A_TeamLead",
+     "A_DocLead",
+     "A_CustomerLiaison"
+    ],
+    "dev": [
+     "R_Backend",
+     "R_Frontend",
+     "R_Analyst"
+    ]
+   },
+   {
+    "name": "Raghd Alfakavi",
+    "no": "2200002698",
+    "email": "2200002698@stu.iku.edu.tr",
+    "share": "45",
+    "admin": [
+     "A_ReleaseManager",
+     "A_QualityLead"
+    ],
+    "dev": [
+     "R_Data",
+     "R_Tester",
+     "R_Architect"
+    ]
+   }
+  ],
+  "modules": [
+   {
+    "name": "Product and stock module",
+    "kind": "module",
+    "what": "Add, edit and delete products; track stock levels; record stock arriving from suppliers.",
+    "epic": "E1",
+    "owner": "Malak Alfakavi",
+    "second": "Raghd Alfakavi"
+   },
+   {
+    "name": "Reports and alerts dashboard",
+    "kind": "feature",
+    "what": "Weekly sales charts, best sellers and low-stock alerts on one page.",
+    "epic": "E3",
+    "owner": "Malak Alfakavi",
+    "second": "Raghd Alfakavi"
+   },
+   {
+    "name": "Sales recording module",
+    "kind": "module",
+    "what": "Record each sale quickly; stock is reduced automatically.",
+    "epic": "E2",
+    "owner": "Raghd Alfakavi",
+    "second": "Malak Alfakavi"
+   },
+   {
+    "name": "CSV import, validation and export",
+    "kind": "feature",
+    "what": "Import the shop's existing product list from CSV/Excel, validate it, and export data as CSV and JSON-LD.",
+    "epic": "E4",
+    "owner": "Raghd Alfakavi",
+    "second": "Malak Alfakavi"
+   }
+  ],
+  "leads": {
+   "P01": "Malak Alfakavi",
+   "P02": "Malak Alfakavi",
+   "P03": "Malak Alfakavi",
+   "P04": "Raghd Alfakavi",
+   "P05": "Malak Alfakavi",
+   "P07": "Malak Alfakavi",
+   "P08": "Raghd Alfakavi",
+   "P09": "Raghd Alfakavi",
+   "P10": "Raghd Alfakavi",
+   "P11": "Malak Alfakavi"
+  },
+  "customers": [
+   {
+    "name": "The Koozie Corner, Taif, Saudi Arabia",
+    "contact": "Hiyam Yassin, owner of the shop",
+    "reached": "WhatsApp, 17 October 2026, answered and agreed to test",
+    "relation": "owner",
+    "gets": "One simple web tool that replaces their Excel sheets and notebook: live stock, weekly sales and low-stock alerts in one place."
+   }
+  ],
+  "endUsers": [
+   {
+    "group": "Shop owner",
+    "who": "The owner who runs the shop and orders from suppliers",
+    "task": "Checks stock, sees weekly sales reports and decides what to reorder",
+    "frequency": "daily",
+    "device": "Laptop or phone browser"
+   },
+   {
+    "group": "Shop staff",
+    "who": "Cashiers and helpers working at the shop counter",
+    "task": "Record each sale and register new stock when deliveries arrive",
+    "frequency": "daily",
+    "device": "Phone or tablet browser at the counter"
+   }
+  ],
+  "problem": "The shop tracks its stock and sales in Excel sheets together with a physical notebook for quick daily notes. Sales written in the notebook during the day must be copied into Excel later, so the two often do not match and the real stock level is never certain. When a popular product runs out, the owner usually notices only when a customer asks for it, so the sale is lost. Reordering is based on looking at the shelves rather than on data, which leads both to empty shelves and to products that stay unsold. The shop sells around 25 to 35 different products, and the owner spends about 4 to 5 hours every week counting stock, copying notes into Excel and checking sales (owner's answers by WhatsApp, 17 October 2026). There is no weekly report that shows which products sell best. The shop needs one simple tool that staff can use from a phone at the counter, that updates stock automatically with every sale, and that warns before a product runs out.",
+  "mission": "ShopTrack gives the shop owner and shop staff of a small shop in Taif a simple Python web application to record sales, see live stock levels and receive low-stock alerts, so the shop owner stops losing sales to empty shelves and spends minutes, not hours, on weekly stock and sales reports.",
+  "missionOrigin": "IOrigin_Derived",
+  "outcome": "Once ShopTrack exists, the shop owner opens one page and sees what is in stock, what sold this week and which products must be reordered today. Shop staff record a sale in a few taps on a phone, and the stock updates automatically, which the Excel sheets and notebook can never do.",
+  "areas": [
+   {
+    "area": "Product and stock management",
+    "where": "Flask web app, products and stock tables in SQLite",
+    "measure": "Excel sheets and a paper notebook that often do not match"
+   },
+   {
+    "area": "Sales recording",
+    "where": "Sales page used by shop staff at the counter",
+    "measure": "Sales noted in a notebook, copied into Excel later"
+   },
+   {
+    "area": "Reports and alerts",
+    "where": "Dashboard page with charts and alerts",
+    "measure": "No reports; weekly totals added up by hand"
+   },
+   {
+    "area": "Data import, validation and export",
+    "where": "CSV import tool, SHACL validation, CSV and JSON-LD export",
+    "measure": "No machine-readable data"
+   }
+  ],
+  "deliverables": [
+   {
+    "text": "Product list with add, edit, delete and stock-in",
+    "area": "A1",
+    "layer": "Layer_Product",
+    "kind": "Kind_Functional"
+   },
+   {
+    "text": "Stock can never go below zero; every change is recorded",
+    "area": "A1",
+    "layer": "Layer_Product",
+    "kind": "Kind_NonFunctional"
+   },
+   {
+    "text": "Sales page that records a sale and reduces stock",
+    "area": "A2",
+    "layer": "Layer_Product",
+    "kind": "Kind_Functional"
+   },
+   {
+    "text": "Recording a sale takes under 15 seconds on a phone",
+    "area": "A2",
+    "layer": "Layer_Product",
+    "kind": "Kind_NonFunctional"
+   },
+   {
+    "text": "Dashboard with weekly sales chart, best sellers and low-stock alerts",
+    "area": "A3",
+    "layer": "Layer_Product",
+    "kind": "Kind_Functional"
+   },
+   {
+    "text": "CSV import with validation and error report; CSV and JSON-LD export",
+    "area": "A4",
+    "layer": "Layer_Product",
+    "kind": "Kind_Functional"
+   },
+   {
+    "text": "Unit tests with pytest and a short user guide for the shop",
+    "area": "A4",
+    "layer": "Layer_Work",
+    "kind": "Kind_NonFunctional"
+   }
+  ],
+  "exclusions": [
+   {
+    "what": "Card payments and a cash-register (POS) integration",
+    "why": "Payment systems need certification and bank contracts; the shop keeps its existing payment method."
+   },
+   {
+    "what": "E-invoicing (ZATCA Fatoora) and VAT accounting",
+    "why": "Official Saudi tax invoices need an approved e-invoicing solution and an accountant; out of reach in one term."
+   },
+   {
+    "what": "Online shop for customers",
+    "why": "The problem is inside the shop (stock and sales); selling online is a different project."
+   },
+   {
+    "what": "Customer personal data and loyalty cards",
+    "why": "Not needed to solve the stock problem and would bring personal-data obligations."
+   }
+  ],
+  "entities": [
+   {
+    "entity": "Product",
+    "def": "An item the shop sells, with name, category, barcode (optional), price and reorder level.",
+    "create": "yes",
+    "use": "yes",
+    "end": "yes"
+   },
+   {
+    "entity": "Stock movement",
+    "def": "A change in the quantity of a product: stock in from a supplier, a sale, or a correction.",
+    "create": "yes",
+    "use": "yes",
+    "end": "no"
+   },
+   {
+    "entity": "Sale",
+    "def": "One sale recorded by staff: products, quantities, total and time.",
+    "create": "yes",
+    "use": "yes",
+    "end": "no"
+   },
+   {
+    "entity": "User",
+    "def": "A person who signs in: the shop owner (all rights) or a staff member (sales and stock-in only).",
+    "create": "yes",
+    "use": "yes",
+    "end": "yes"
+   }
+  ],
+  "projectKinds": [
+   "PK_Pipeline",
+   "PK_KGWeb"
+  ],
+  "projectKind": "PK_Pipeline",
+  "tech": [
+   "SchemaOrgVocabulary",
+   "JSONLDContext",
+   "RDFLibPython",
+   "SHACLCore",
+   "PySHACLLib"
+  ],
+  "techWhy": "schema.org gives standard terms for the shop's data (schema:Product, schema:Offer, schema:Order), so we do not invent our own names. JSON-LD lets ShopTrack export the product list in a form other tools and websites understand, while it stays ordinary JSON. RDFLib builds and reads that graph in Python. SHACL shapes, checked with pySHACL, validate every product imported from the shop's CSV (name present, price positive, stock a whole number) before it enters the database, so bad rows are reported instead of silently breaking the stock figures.",
+  "goals": [
+   {
+    "goal": "The shop owner always knows what is in stock and what to reorder, without counting shelves",
+    "facing": "Facing_Mission",
+    "area": "A3",
+    "why": "This is the change the mission promises."
+   },
+   {
+    "goal": "Products, sales, reports and data import all work together in one delivered application",
+    "facing": "Facing_Scope",
+    "area": "A1",
+    "why": "Every scope area must be finished, not only the easy part."
+   },
+   {
+    "goal": "Sales recording stays simple: no payments, invoices or online shop",
+    "facing": "Facing_Containment",
+    "area": "A2",
+    "why": "Keeps effort inside the named areas so the project fits one term."
+   },
+   {
+    "goal": "Only valid product data ever enters the database",
+    "facing": "Facing_Scope",
+    "area": "A4",
+    "why": "Wrong imported data would make every stock figure and report wrong."
+   }
+  ],
+  "spec": "The shop owner signs in and imports the existing product list from a CSV file; each row is checked against a SHACL shape and invalid rows are listed with the reason. Owner and staff can add and edit products and register stock arriving from suppliers. Staff record a sale by choosing products and quantities; the system saves the sale, reduces the stock of each product and refuses a sale larger than the stock. When a product's stock falls to its reorder level, it appears in the low-stock alert list. The dashboard shows this week's sales total, a daily sales chart and the best-selling products. The owner can export products and sales as CSV or JSON-LD.",
+  "scenarios": [
+   {
+    "kind": "Scen_Nominal",
+    "text": "Given a product with 10 in stock, when staff record a sale of 3, then the sale is saved and the stock shows 7."
+   },
+   {
+    "kind": "Scen_Rejection",
+    "text": "Given a product with 2 in stock, when staff try to record a sale of 5, then the sale is refused with the message Not enough stock and nothing changes."
+   },
+   {
+    "kind": "Scen_Rejection",
+    "text": "Given a CSV row with a negative price, when the owner imports the file, then that row is rejected and shown in the error report with its line number."
+   },
+   {
+    "kind": "Scen_Boundary",
+    "text": "Given a product with reorder level 5 and stock 6, when one unit is sold, then the product appears in the low-stock alerts."
+   },
+   {
+    "kind": "Scen_Absent",
+    "text": "Given no sales recorded this week, when the owner opens the dashboard, then it shows zero sales and a clear empty-state message instead of an error."
+   }
+  ],
+  "useCase": "Actors: Shop owner, Shop staff. Use cases: Import products (owner), Manage products (owner), Register stock-in (owner, staff), Record sale (staff, owner), View dashboard and alerts (owner), Export data (owner), Manage users (owner).",
+  "objectives": [
+   {
+    "objective": "Weekly time the owner spends counting stock and checking records",
+    "goal": "G1",
+    "mkind": "Meas_Judged",
+    "query": "Owner's own estimate in hours per week, asked on 17 Oct 2026 and again after 2 weeks of use",
+    "baseline": "4-5 hours per week (owner's answer, 17 Oct 2026)",
+    "target": "under 1 hour",
+    "dir": "Dir_Decrease"
+   },
+   {
+    "objective": "Share of planned test cases that pass",
+    "goal": "G2",
+    "mkind": "Meas_Derived",
+    "query": "Passed pytest cases divided by planned test cases, from the test report",
+    "baseline": "0%",
+    "target": "at least 90%",
+    "dir": "Dir_Increase"
+   },
+   {
+    "objective": "Work items outside the four scope areas",
+    "goal": "G3",
+    "mkind": "Meas_Counted",
+    "query": "Count of commits or log entries not linked to a story of epics E1-E4",
+    "baseline": "0",
+    "target": "0",
+    "dir": "Dir_Hold"
+   },
+   {
+    "objective": "Invalid product rows that reach the database",
+    "goal": "G4",
+    "mkind": "Meas_Counted",
+    "query": "Import a test CSV with 20 known-bad rows; count how many are stored",
+    "baseline": "No validation",
+    "target": "0",
+    "dir": "Dir_Hold"
+   }
+  ],
+  "activity": "Recording a sale: 1. Staff opens the sales page. 2. Searches or scans a product and enters the quantity. 3. System checks stock: if the quantity is larger than the stock, show Not enough stock and return to step 2; otherwise continue. 4. Staff confirms the sale. 5. System saves the sale and a stock movement and reduces stock. 6. If the new stock is at or below the reorder level, add the product to the low-stock alerts. 7. Show the sale receipt on screen. Import branch: owner uploads CSV, each row is validated, valid rows are saved, invalid rows go to the error report.",
+  "sequence": "Staff -> Sales page: choose product and quantity. Sales page -> Flask route /sales: POST sale. Route -> SaleService: record_sale(items). SaleService -> Product repository: get stock. Product repository -> SaleService: current stock. SaleService -> Database: save Sale and StockMovement, update stock (one transaction). SaleService -> AlertService: check_reorder(product). AlertService -> SaleService: alert or none. SaleService -> Route: result. Route -> Staff: confirmation page with new stock.",
+  "initiativeKind": "Kind_InitialDevelopment",
+  "epics": [
+   {
+    "epic": "E1 Product and stock management",
+    "objective": "O2"
+   },
+   {
+    "epic": "E2 Sales recording",
+    "objective": "O2"
+   },
+   {
+    "epic": "E3 Reports and alerts",
+    "objective": "O1"
+   },
+   {
+    "epic": "E4 Data import, validation and export",
+    "objective": "O4"
+   }
+  ],
+  "stories": [
+   {
+    "epic": "E1",
+    "role": "Shop owner",
+    "want": "to add and edit products with price and reorder level",
+    "so": "the shop's product list is in one place",
+    "ac": "Given I am signed in as owner, when I save a product with name, price and reorder level, then it appears in the product list with stock 0.",
+    "cat": "Cat_NewCapability",
+    "concern": "Concern_Data",
+    "bv": "8",
+    "tc": "6",
+    "rr": "5",
+    "js": "3"
+   },
+   {
+    "epic": "E1",
+    "role": "Shop staff",
+    "want": "to register stock that arrives from a supplier",
+    "so": "the stock figures stay correct",
+    "ac": "Given a product with stock 4, when I register 10 arriving, then the stock shows 14 and a stock movement is recorded.",
+    "cat": "Cat_NewCapability",
+    "concern": "Concern_Data",
+    "bv": "7",
+    "tc": "5",
+    "rr": "4",
+    "js": "2"
+   },
+   {
+    "epic": "E2",
+    "role": "Shop staff",
+    "want": "to record a sale quickly from my phone",
+    "so": "I can keep serving customers",
+    "ac": "Given products in stock, when I choose them with quantities and confirm, then the sale is saved and each product's stock is reduced.",
+    "cat": "Cat_NewCapability",
+    "concern": "Concern_Interaction",
+    "bv": "10",
+    "tc": "8",
+    "rr": "6",
+    "js": "5"
+   },
+   {
+    "epic": "E2",
+    "role": "Shop owner",
+    "want": "sales larger than the stock to be refused",
+    "so": "stock never goes negative",
+    "ac": "Given a product with 2 in stock, when a sale of 5 is entered, then it is refused with Not enough stock and nothing is saved.",
+    "cat": "Cat_NewCapability",
+    "concern": "Concern_Data",
+    "bv": "7",
+    "tc": "5",
+    "rr": "8",
+    "js": "2"
+   },
+   {
+    "epic": "E3",
+    "role": "Shop owner",
+    "want": "a list of products at or below their reorder level",
+    "so": "I reorder before shelves are empty",
+    "ac": "Given a product with reorder level 5, when its stock falls to 5, then it appears in the low-stock alerts on the dashboard.",
+    "cat": "Cat_NewCapability",
+    "concern": "Concern_Interface_UI",
+    "bv": "9",
+    "tc": "7",
+    "rr": "6",
+    "js": "3"
+   },
+   {
+    "epic": "E3",
+    "role": "Shop owner",
+    "want": "a weekly sales chart and best-seller list",
+    "so": "I know what sells and what does not",
+    "ac": "Given sales recorded this week, when I open the dashboard, then I see the weekly total, a daily chart and the top 5 products.",
+    "cat": "Cat_NewCapability",
+    "concern": "Concern_Interface_UI",
+    "bv": "8",
+    "tc": "5",
+    "rr": "3",
+    "js": "5"
+   },
+   {
+    "epic": "E4",
+    "role": "Shop owner",
+    "want": "to import my existing product list from a CSV file",
+    "so": "I do not type hundreds of products by hand",
+    "ac": "Given a CSV with valid and invalid rows, when I import it, then valid rows are saved and invalid rows are listed with their line number and reason.",
+    "cat": "Cat_NewCapability",
+    "concern": "Concern_Architecture",
+    "bv": "8",
+    "tc": "7",
+    "rr": "7",
+    "js": "5"
+   },
+   {
+    "epic": "E1",
+    "role": "Shop owner",
+    "want": "staff accounts that can only record sales and stock-in",
+    "so": "staff cannot change prices or delete products",
+    "ac": "Given I am signed in as staff, when I open the edit-price page, then access is refused.",
+    "cat": "Cat_NewCapability",
+    "concern": "Concern_Security",
+    "bv": "6",
+    "tc": "4",
+    "rr": "7",
+    "js": "3"
+   }
+  ],
+  "dod": [
+   {
+    "criterion": "Code is committed and the work-log entry links the commit",
+    "check": "Commit link present in the log entry"
+   },
+   {
+    "criterion": "All pytest tests pass",
+    "check": "pytest run shows no failures"
+   },
+   {
+    "criterion": "The story's acceptance criterion is demonstrated",
+    "check": "Screenshot or short video attached to the story"
+   },
+   {
+    "criterion": "Code follows PEP 8 and has docstrings",
+    "check": "flake8 shows no errors"
+   }
+  ],
+  "classModel": "Product (id, name, category, barcode, price, stock, reorder_level; methods: add_stock(qty), remove_stock(qty), needs_reorder()). StockMovement (id, product, quantity, kind: IN | SALE | CORRECTION, time). Sale (id, time, user, total; has 1..* SaleItem). SaleItem (product, quantity, unit_price). User (id, name, role: OWNER | STAFF, password_hash). Services: SaleService (record_sale), ImportService (import_csv, validate_row), ReportService (weekly_total, best_sellers, low_stock). Product 1 -- 0..* StockMovement; Sale 1 -- 1..* SaleItem; SaleItem * -- 1 Product.",
+  "tests": [
+   {
+    "story": "S1",
+    "case": "Create a product and check it is listed with stock 0",
+    "data": "Product 'Tea 500g', price 85, reorder level 5"
+   },
+   {
+    "story": "S2",
+    "case": "Register stock-in and check the new stock and movement",
+    "data": "Product with stock 4, add 10"
+   },
+   {
+    "story": "S3",
+    "case": "Record a sale of 2 products and check stock reduced",
+    "data": "Tea stock 10 sell 3; Sugar stock 8 sell 1"
+   },
+   {
+    "story": "S4",
+    "case": "Try a sale larger than stock",
+    "data": "Product with stock 2, sale of 5"
+   },
+   {
+    "story": "S5",
+    "case": "Sell until reorder level and check the alert",
+    "data": "Product stock 6, reorder level 5, sell 1"
+   },
+   {
+    "story": "S6",
+    "case": "Check weekly total and top 5 on seeded sales",
+    "data": "Fixture with 30 sales over 7 days"
+   },
+   {
+    "story": "S7",
+    "case": "Import a CSV with 18 valid and 2 invalid rows",
+    "data": "products_test.csv with a negative price and a missing name"
+   },
+   {
+    "story": "S8",
+    "case": "Staff user opens the edit-price page",
+    "data": "Staff test account"
+   }
+  ],
+  "model_Data": "Tables: products, stock_movements, sales, sale_items, users in SQLite through SQLAlchemy. Stock is always changed through a stock movement inside one transaction, so stock = sum of movements and can be rebuilt. Constraint: stock >= 0.",
+  "model_Interaction": "Sale sequence: Staff selects products -> page sends POST /sales -> SaleService checks stock for every item -> if all available, saves Sale, SaleItems and StockMovements in one transaction -> AlertService checks reorder levels -> page shows confirmation; if any item is short, nothing is saved and the short items are shown.",
+  "model_User_interface": "Screens: 1) Sign in; 2) Dashboard (weekly total, daily chart, top 5, low-stock alerts); 3) Products list with search; 4) Product form; 5) Sales page with large buttons for phone use; 6) Import page with error report; 7) Export page.",
+  "model_Architecture": "Layers: Flask routes and Jinja templates (presentation) -> service classes SaleService, ImportService, ReportService (business logic) -> repository classes over SQLAlchemy and SQLite (data). Validation module uses RDFLib + pySHACL on imported rows. Charts made with matplotlib and served as images.",
+  "model_Security": "States of a user session: Signed out -> Signed in as Staff (sales, stock-in only) or Signed in as Owner (everything). Any request to an owner-only page from a staff session is refused (403). Passwords stored only as hashes (werkzeug.security).",
+  "libraries": "Python libraries: Flask (web app and routing), SQLAlchemy with SQLite (database), pandas (reading CSV and Excel, weekly sales calculations), matplotlib (sales charts), RDFLib and pySHACL (JSON-LD export and validation of imported products), werkzeug.security (password hashing), and pytest (unit tests). Course topics applied: object-oriented programming with classes, inheritance and encapsulation (Product, Sale, User, service and repository classes), modules and packages, exception handling (NotEnoughStockError, invalid CSV rows), file I/O for CSV and JSON, decorators (login_required, role checks, timing), generators for reading large CSV files row by row, and automated unit testing with pytest.",
+  "milestones": [
+   {
+    "date": "2026-10-24",
+    "deliverable": "Proposal handed in; repository created; owner interviewed by WhatsApp",
+    "owner": "Malak Alfakavi"
+   },
+   {
+    "date": "2026-11-14",
+    "deliverable": "Product and stock module with database and tests",
+    "owner": "Malak Alfakavi"
+   },
+   {
+    "date": "2026-11-28",
+    "deliverable": "Sales recording and CSV import with validation",
+    "owner": "Raghd Alfakavi"
+   },
+   {
+    "date": "2026-12-12",
+    "deliverable": "Dashboard with charts and alerts; test report",
+    "owner": "Malak Alfakavi"
+   },
+   {
+    "date": "2026-12-19",
+    "deliverable": "Tagged release v1.0, online trial with the shop owner, final submission",
+    "owner": "Raghd Alfakavi"
+   }
+  ],
+  "risks": [
+   {
+    "risk": "The team has only two members and the workload is large for one term",
+    "likelihood": "medium",
+    "impact": "high",
+    "mitigation": "Split modules clearly; drop export and charts polish first if late."
+   },
+   {
+    "risk": "The shop owner is too busy to test the system",
+    "likelihood": "medium",
+    "impact": "medium",
+    "mitigation": "Agree a 20-minute test date now; prepare a demo with sample data."
+   },
+   {
+    "risk": "The shop's existing product list is messy or incomplete",
+    "likelihood": "high",
+    "impact": "medium",
+    "mitigation": "CSV import with validation and an error report; fix rows together with the owner."
+   },
+   {
+    "risk": "The shop is in Taif, Saudi Arabia, so testing and feedback happen remotely",
+    "likelihood": "medium",
+    "impact": "medium",
+    "mitigation": "Host the app online, run the trial over a video call, and collect feedback by WhatsApp."
+   },
+   {
+    "risk": "Free hosting is slow or goes down",
+    "likelihood": "low",
+    "impact": "medium",
+    "mitigation": "Run locally on the owner's laptop as backup; keep a database backup."
+   }
+  ],
+  "refs": [
+   {
+    "ref": "Python Software Foundation, \"The Python Language Reference,\" https://docs.python.org/3/"
+   },
+   {
+    "ref": "Pallets, \"Flask Documentation,\" https://flask.palletsprojects.com"
+   },
+   {
+    "ref": "W. McKinney, Python for Data Analysis, 3rd ed., O'Reilly, 2022."
+   },
+   {
+    "ref": "E. Gamma, R. Helm, R. Johnson, J. Vlissides, Design Patterns: Elements of Reusable Object-Oriented Software, Addison-Wesley, 1994."
+   },
+   {
+    "ref": "schema.org, \"Product\" and \"Offer\" types, https://schema.org/Product"
+   },
+   {
+    "ref": "W3C, \"Shapes Constraint Language (SHACL),\" W3C Recommendation, 2017."
+   },
+   {
+    "ref": "pytest documentation, https://docs.pytest.org"
+   }
+  ],
+  "worklog": [
+   {
+    "seq": 1,
+    "ts": "2026-10-17T14:17:36.309Z",
+    "member": "Malak Alfakavi",
+    "process": "P01",
+    "story": "S1",
+    "hours": 2,
+    "description": "Chose the ShopTrack idea and prepared mission, scope, goals and backlog in the proposal",
+    "evidence": "https://github.com/Malak600/shoptrack--0414",
+    "kind": "work",
+    "ref": "",
+    "prev": "GENESIS",
+    "hash": "a5d30643d39cef6c82d0e50bdbe24fb19f374f9f162a190bb15e402c25dc97b5"
+   },
+   {
+    "seq": 2,
+    "ts": "2026-10-17T14:18:11.144Z",
+    "member": "Malak Alfakavi",
+    "process": "P04",
+    "story": "S7",
+    "hours": 1,
+    "description": "Renamed the GitHub repository to shoptrack and wrote the README with architecture and folders",
+    "evidence": "https://github.com/Malak600/shoptrack--0414",
+    "kind": "work",
+    "ref": "",
+    "prev": "a5d30643d39cef6c82d0e50bdbe24fb19f374f9f162a190bb15e402c25dc97b5",
+    "hash": "5b7e1993599f9e07d2b7d9c2478fed3d3568176d52fb4aecefba0409aa1ec7ca"
+   },
+   {
+    "seq": 3,
+    "ts": "2026-10-17T14:18:46.110Z",
+    "member": "Raghd Alfakavi",
+    "process": "P02",
+    "story": "S3",
+    "hours": 1,
+    "description": "Reviewed the sales and import stories and checked the acceptance criteria with the team",
+    "evidence": "https://github.com/Malak600/shoptrack--0414",
+    "kind": "work",
+    "ref": "",
+    "prev": "5b7e1993599f9e07d2b7d9c2478fed3d3568176d52fb4aecefba0409aa1ec7ca",
+    "hash": "fb1b6cbc09a9e2782945d283065cbc82e09cefec5db5300fa18c1c8f95088210"
+   },
+   {
+    "seq": 4,
+    "ts": "2026-10-17T14:19:19.798Z",
+    "member": "Raghd Alfakavi",
+    "process": "P07",
+    "story": "S3",
+    "hours": 2,
+    "description": "Set up the Flask project structure, requirements file and first pytest test",
+    "evidence": "https://github.com/Malak600/shoptrack--0414",
+    "kind": "work",
+    "ref": "",
+    "prev": "fb1b6cbc09a9e2782945d283065cbc82e09cefec5db5300fa18c1c8f95088210",
+    "hash": "eb49a608a55eedd72ad4bd2e304106469fec2eaf29c5a6a222a9f6a9a6450fb4"
+   },
+   {
+    "seq": 5,
+    "ts": "2026-10-26T10:51:03.548Z",
+    "member": "Raghd Alfakavi",
+    "process": "P07",
+    "story": "S3",
+    "hours": 1.5,
+    "description": "Uploaded the Flask starter code and organized it into app, models, routes and tests packages",
+    "evidence": "https://github.com/Malak600/shoptrack--0414/commits/main",
+    "kind": "work",
+    "ref": "",
+    "prev": "eb49a608a55eedd72ad4bd2e304106469fec2eaf29c5a6a222a9f6a9a6450fb4",
+    "hash": "a208e568ce261d6d9b6f7b4dbb998abf30c9fbb30c95d82d928605f3a56af821"
+   },
+   {
+    "seq": 6,
+    "ts": "2026-10-26T11:04:41.334Z",
+    "member": "Raghd Alfakavi",
+    "process": "P07",
+    "story": "",
+    "hours": 0.1,
+    "description": "Correction: the Flask setup in entry 4 was planned that day and actually committed on 26 October, see entry 5",
+    "evidence": "https://github.com/Malak600/shoptrack--0414/commits/main",
+    "kind": "correction",
+    "ref": "4",
+    "prev": "a208e568ce261d6d9b6f7b4dbb998abf30c9fbb30c95d82d928605f3a56af821",
+    "hash": "0fb81d6a3c5c23b0a8d0c1c5cc7dc807fce51cdbb7aaac4b995f33b56c97db26"
+   }
+  ],
+  "repo": "https://github.com/Malak600/shoptrack--0414",
+  "repoCheck": {
+   "ok": true,
+   "result": "found",
+   "at": "2026-10-17T14:16:14.284Z",
+   "full_name": "Malak600/shoptrack--0414",
+   "html_url": "https://github.com/Malak600/shoptrack--0414",
+   "private": false,
+   "created_at": "2026-10-17T13:07:16Z",
+   "pushed_at": "2026-10-17T14:11:03Z",
+   "default_branch": "main",
+   "id": 1423339451
+  }
+ }
+}
