@@ -8,7 +8,7 @@ Course project for **SEN0414 Advanced Programming**, Istanbul Kültür Universit
 
 ## The problem
 
-The shop keeps its stock and sales in a paper notebook. Popular products run out without warning, reordering is guesswork, and adding up the week's sales by hand takes hours and is often wrong.
+The shop tracks its stock and sales in Excel sheets and a paper notebook that often do not match. Popular products run out without warning, reordering is guesswork, and adding up the week's sales by hand takes hours and is often wrong.
 
 ## The solution
 
