@@ -1,6 +1,6 @@
 # ShopTrack
 
-   **Python inventory and sales tracker for Koozie Corner, a small shop in Taif, Saudi Arabia**
+**Python inventory and sales tracker for Koozie Corner, a small shop in Taif, Saudi Arabia**
 
 Course project for **SEN0414 Advanced Programming**, Istanbul Kültür University, 2026–2027 Fall.
 
@@ -19,6 +19,10 @@ ShopTrack is a simple web app that staff can use from a phone at the counter:
 - **Low-stock alerts**: products at or below their reorder level are flagged
 - **Dashboard**: weekly sales total, daily chart and best sellers
 - **CSV import and export**: bring in the shop's existing product list, with validation; export as CSV or JSON-LD
+
+## Customer
+
+Koozie Corner, Taif, Saudi Arabia. Contact: Hiyam Yassin, owner of the shop.
 
 ## Users
 
@@ -47,17 +51,19 @@ ShopTrack is a simple web app that staff can use from a phone at the counter:
 
 ## Repository structure
 
+Folders marked *(planned)* are added as the project is built.
+
 ```
 shoptrack/
 ├── app/
 │   ├── models/        Product, Sale, SaleItem, StockMovement, User
-│   ├── services/      sale, import, report and alert logic
+│   ├── services/      sale, import, report and alert logic (planned)
 │   ├── routes/        Flask pages and forms
 │   ├── templates/     HTML pages
-│   └── validation/    SHACL shape and validator
+│   └── validation/    SHACL shape and validator (planned)
 ├── tests/             pytest unit tests
-├── data/              sample CSV files for testing
-├── docs/              diagrams, user guide, meeting notes
+├── data/              sample CSV files for testing (planned)
+├── docs/              diagrams, user guide, meeting notes (planned)
 ├── proposal/          proposal files saved from the Proposal Workbench
 └── requirements.txt
 ```
@@ -80,16 +86,16 @@ Object-oriented programming (classes, inheritance, encapsulation), modules and p
 
 ## Getting started
 
-> The code is not written yet; these steps will be completed as the project is built.
+> The project is in early development: the Flask app skeleton, the Product model and the first pytest tests are in place.
 
 ```bash
-git clone https://github.com/<owner>/shoptrack.git
-cd shoptrack
+git clone https://github.com/Malak600/shoptrack--0414.git
+cd shoptrack--0414
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-flask run
 pytest
+python run.py                   # then open http://127.0.0.1:5000
 ```
 
 You need Python 3.11 or newer.
@@ -105,18 +111,17 @@ You need Python 3.11 or newer.
 
 | Date | Milestone |
 |---|---|
-| 2026-10-24 | Proposal handed in, repository created, meeting with the shop owner |
+| 2026-10-24 | Proposal handed in, repository created, shop owner interviewed by WhatsApp |
 | 2026-11-14 | Product and stock module with database and tests |
 | 2026-11-28 | Sales recording and CSV import with validation |
 | 2026-12-12 | Dashboard with charts and alerts; test report |
-| 2026-12-19 | Release v1.0, trial at the shop, final submission |
+| 2026-12-19 | Release v1.0, online trial with the shop owner, final submission |
 
 ## How we work
 
 - Each member commits from their **own GitHub account**.
-- New work goes on a branch and is merged into `main` through a pull request.
 - Every work-log entry in the Proposal Workbench links the commit that shows the work.
-- Code follows PEP 8, and all tests must pass before merging.
+- Code follows PEP 8, and all tests must pass before a commit is pushed.
 
 ## License
 
