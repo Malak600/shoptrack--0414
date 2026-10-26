@@ -1,6 +1,6 @@
 # ShopTrack
 
-**Python inventory and sales tracker for a small Istanbul shop**
+   **Python inventory and sales tracker for Koozie Corner, a small shop in Taif, Saudi Arabia**
 
 Course project for **SEN0414 Advanced Programming**, Istanbul Kültür University, 2026–2027 Fall.
 
