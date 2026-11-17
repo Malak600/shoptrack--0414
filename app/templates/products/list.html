@@ -1,0 +1,10 @@
+{% with messages = get_flashed_messages(with_categories=true) %} {% for category, message in messages %}
+{{ message }}
+{% endfor %} {% endwith %} {% if products %}
+{% for p in products %} {% endfor %}
+Name	Price	Stock	Reorder at	Stock in	
+{{ p.name }}{% if p.needs_reorder() %} Low stock{% endif %}	{{ "%.2f"|format(p.price) }}	{{ p.stock }}	{{ p.reorder_level }}	
+{% else %}
+No products yet. Add the first one.
+
+{% endif %}
