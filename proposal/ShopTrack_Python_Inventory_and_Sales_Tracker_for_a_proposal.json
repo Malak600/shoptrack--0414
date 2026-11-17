@@ -4,7 +4,7 @@
  "stage": "proposal",
  "stageLabel": "Proposal",
  "stageFills": "The plan: who the system is for, what it will do, how it will be built and checked, and who does what. Nothing is implemented yet: the Delivery and evidence part stays empty.",
- "saved": "2026-11-17T16:36:34.111Z",
+ "saved": "2026-11-17T17:27:13.303Z",
  "proposal": {
   "course": "SEN0414",
   "semester": "2026-2027 Fall",
@@ -721,6 +721,34 @@
     "ref": "",
     "prev": "e5547a4cbf723ed71ba1cca49e0f35950fd65c9d82e36347b9a80d4ad234e14b",
     "hash": "d5daafb32313192ca75ef4715a82e6991f5ce0d3033a2d297573bc8c7cff80b7"
+   },
+   {
+    "seq": 9,
+    "ts": "2026-11-17T16:49:56.983Z",
+    "member": "Malak Alfakavi",
+    "process": "P07",
+    "story": "S5",
+    "hours": 1,
+    "description": "Added the dashboard with weekly sales total, daily chart, top products and low-stock alerts",
+    "evidence": "Added the dashboard with weekly sales total, daily chart, top products and low-stock alerts",
+    "kind": "work",
+    "ref": "",
+    "prev": "d5daafb32313192ca75ef4715a82e6991f5ce0d3033a2d297573bc8c7cff80b7",
+    "hash": "d3bf7ef3647f5c439612b306db6384c00b1511fd3d85033c67c458d260c94396"
+   },
+   {
+    "seq": 10,
+    "ts": "2026-11-17T17:25:50.783Z",
+    "member": "Malak Alfakavi",
+    "process": "P07",
+    "story": "S8",
+    "hours": 2,
+    "description": "Added sign-in with owner and staff roles, password hashing and permission tests",
+    "evidence": "https://github.com/Malak600/shoptrack--0414/commits/main",
+    "kind": "work",
+    "ref": "",
+    "prev": "d3bf7ef3647f5c439612b306db6384c00b1511fd3d85033c67c458d260c94396",
+    "hash": "2e129763a55283788bbaebe562f861bba7cc25bbd62f72d301b32f60c4839bbe"
    }
   ],
   "repo": "https://github.com/Malak600/shoptrack--0414",

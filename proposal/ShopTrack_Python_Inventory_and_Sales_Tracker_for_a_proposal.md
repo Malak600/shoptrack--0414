@@ -33,7 +33,7 @@ SEN0414 Advanced Programming · 2026-2027 Fall · Proposal · Method: BRSF softw
 
 ### Work log
 
-8 entries; chain intact; head fingerprint d5daafb32313192ca75ef4715a82e6991f5ce0d3033a2d297573bc8c7cff80b7.
+10 entries; chain intact; head fingerprint 2e129763a55283788bbaebe562f861bba7cc25bbd62f72d301b32f60c4839bbe.
 
 | No. | Time (UTC) | Member | Process | Hours | What | Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -45,6 +45,8 @@ SEN0414 Advanced Programming · 2026-2027 Fall · Proposal · Method: BRSF softw
 | 6 | 2026-10-26 11:04 | Raghd Alfakavi | Implementation | 0.1 | Correction: the Flask setup in entry 4 was planned that day and actually committed on 26 October, see entry 5 | https://github.com/Malak600/shoptrack--0414/commits/main |
 | 7 | 2026-11-17 16:35 | Malak Alfakavi | Implementation | 1 | Added the product pages for adding, editing and stock-in with stock movements and tests | https://github.com/Malak600/shoptrack--0414/commits/main |
 | 8 | 2026-11-17 16:36 | Raghd Alfakavi | Implementation | 1 | Built the sales recording page, sale service and CSV export of sales with tests | https://github.com/Malak600/shoptrack--0414/commits/main |
+| 9 | 2026-11-17 16:49 | Malak Alfakavi | Implementation | 1 | Added the dashboard with weekly sales total, daily chart, top products and low-stock alerts | Added the dashboard with weekly sales total, daily chart, top products and low-stock alerts |
+| 10 | 2026-11-17 17:25 | Malak Alfakavi | Implementation | 2 | Added sign-in with owner and staff roles, password hashing and permission tests | https://github.com/Malak600/shoptrack--0414/commits/main |
 
 ## 1. Mission
 
