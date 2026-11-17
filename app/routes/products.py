@@ -2,6 +2,7 @@
 from flask import Blueprint, abort, flash, redirect, render_template, request, url_for
 
 from app import db
+from app.auth import login_required, owner_required
 from app.models.product import Product
 from app.models.stock_movement import StockMovement
 
@@ -26,6 +27,7 @@ def _read_product_form(form):
 
 
 @bp.route("/", methods=["GET"])
+@login_required
 def index():
     """Show all products with their stock and a stock-in form."""
     products = Product.query.order_by(Product.name).all()
@@ -33,6 +35,7 @@ def index():
 
 
 @bp.route("/new", methods=["GET", "POST"])
+@owner_required
 def new():
     """Add a new product. New products start with stock 0."""
     if request.method == "POST":
@@ -48,6 +51,7 @@ def new():
 
 
 @bp.route("/<int:product_id>/edit", methods=["GET", "POST"])
+@owner_required
 def edit(product_id):
     """Edit a product's name, price and reorder level (not its stock)."""
     product = db.session.get(Product, product_id) or abort(404)
@@ -65,6 +69,7 @@ def edit(product_id):
 
 
 @bp.route("/<int:product_id>/stock-in", methods=["POST"])
+@login_required
 def stock_in(product_id):
     """Register stock arriving from a supplier and record the movement."""
     product = db.session.get(Product, product_id) or abort(404)
