@@ -4,7 +4,7 @@
  "stage": "proposal",
  "stageLabel": "Proposal",
  "stageFills": "The plan: who the system is for, what it will do, how it will be built and checked, and who does what. Nothing is implemented yet: the Delivery and evidence part stays empty.",
- "saved": "2026-10-26T11:05:17.237Z",
+ "saved": "2026-11-17T16:36:34.111Z",
  "proposal": {
   "course": "SEN0414",
   "semester": "2026-2027 Fall",
@@ -693,6 +693,34 @@
     "ref": "4",
     "prev": "a208e568ce261d6d9b6f7b4dbb998abf30c9fbb30c95d82d928605f3a56af821",
     "hash": "0fb81d6a3c5c23b0a8d0c1c5cc7dc807fce51cdbb7aaac4b995f33b56c97db26"
+   },
+   {
+    "seq": 7,
+    "ts": "2026-11-17T16:35:38.180Z",
+    "member": "Malak Alfakavi",
+    "process": "P07",
+    "story": "S1",
+    "hours": 1,
+    "description": "Added the product pages for adding, editing and stock-in with stock movements and tests",
+    "evidence": "https://github.com/Malak600/shoptrack--0414/commits/main",
+    "kind": "work",
+    "ref": "",
+    "prev": "0fb81d6a3c5c23b0a8d0c1c5cc7dc807fce51cdbb7aaac4b995f33b56c97db26",
+    "hash": "e5547a4cbf723ed71ba1cca49e0f35950fd65c9d82e36347b9a80d4ad234e14b"
+   },
+   {
+    "seq": 8,
+    "ts": "2026-11-17T16:36:17.475Z",
+    "member": "Raghd Alfakavi",
+    "process": "P07",
+    "story": "S3",
+    "hours": 1,
+    "description": "Built the sales recording page, sale service and CSV export of sales with tests",
+    "evidence": "https://github.com/Malak600/shoptrack--0414/commits/main",
+    "kind": "work",
+    "ref": "",
+    "prev": "e5547a4cbf723ed71ba1cca49e0f35950fd65c9d82e36347b9a80d4ad234e14b",
+    "hash": "d5daafb32313192ca75ef4715a82e6991f5ce0d3033a2d297573bc8c7cff80b7"
    }
   ],
   "repo": "https://github.com/Malak600/shoptrack--0414",

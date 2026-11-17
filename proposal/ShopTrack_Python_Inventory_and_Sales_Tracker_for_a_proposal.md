@@ -33,7 +33,7 @@ SEN0414 Advanced Programming · 2026-2027 Fall · Proposal · Method: BRSF softw
 
 ### Work log
 
-6 entries; chain intact; head fingerprint 0fb81d6a3c5c23b0a8d0c1c5cc7dc807fce51cdbb7aaac4b995f33b56c97db26.
+8 entries; chain intact; head fingerprint d5daafb32313192ca75ef4715a82e6991f5ce0d3033a2d297573bc8c7cff80b7.
 
 | No. | Time (UTC) | Member | Process | Hours | What | Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -43,6 +43,8 @@ SEN0414 Advanced Programming · 2026-2027 Fall · Proposal · Method: BRSF softw
 | 4 | 2026-10-17 14:19 | Raghd Alfakavi | Implementation | 2 | Set up the Flask project structure, requirements file and first pytest test | https://github.com/Malak600/shoptrack--0414 |
 | 5 | 2026-10-26 10:51 | Raghd Alfakavi | Implementation | 1.5 | Uploaded the Flask starter code and organized it into app, models, routes and tests packages | https://github.com/Malak600/shoptrack--0414/commits/main |
 | 6 | 2026-10-26 11:04 | Raghd Alfakavi | Implementation | 0.1 | Correction: the Flask setup in entry 4 was planned that day and actually committed on 26 October, see entry 5 | https://github.com/Malak600/shoptrack--0414/commits/main |
+| 7 | 2026-11-17 16:35 | Malak Alfakavi | Implementation | 1 | Added the product pages for adding, editing and stock-in with stock movements and tests | https://github.com/Malak600/shoptrack--0414/commits/main |
+| 8 | 2026-11-17 16:36 | Raghd Alfakavi | Implementation | 1 | Built the sales recording page, sale service and CSV export of sales with tests | https://github.com/Malak600/shoptrack--0414/commits/main |
 
 ## 1. Mission
 
