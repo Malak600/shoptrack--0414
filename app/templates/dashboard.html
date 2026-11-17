@@ -13,8 +13,15 @@
             <div>
                 <a href="{{ url_for('products.index') }}" class="btn btn-outline-secondary btn-sm">Products</a>
                 <a href="{{ url_for('sales.index') }}" class="btn btn-outline-secondary btn-sm">Sales</a>
+                <a href="{{ url_for('auth.logout') }}" class="btn btn-link btn-sm">Sign out</a>
             </div>
         </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        {% endwith %}
 
         <div class="row g-3">
             <div class="col-md-4">
@@ -74,6 +81,21 @@
                         {% endif %}
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mt-3 mb-4">
+            <div class="card-body">
+                <h2 class="h6">Staff accounts</h2>
+                <p class="text-muted small mb-2">Staff can record sales and register stock-in. Only the owner can change products and see this dashboard.</p>
+                {% if staff %}
+                <p class="mb-2">{% for u in staff %}<span class="badge bg-secondary me-1">{{ u.username }}</span>{% endfor %}</p>
+                {% endif %}
+                <form action="{{ url_for('auth.add_staff') }}" method="POST" class="row g-2">
+                    <div class="col-sm-5"><input name="username" class="form-control form-control-sm" placeholder="Username" required></div>
+                    <div class="col-sm-5"><input name="password" type="password" minlength="6" class="form-control form-control-sm" placeholder="Password (6+ characters)" required></div>
+                    <div class="col-sm-2"><button class="btn btn-primary btn-sm w-100">Add staff</button></div>
+                </form>
             </div>
         </div>
     </div>
