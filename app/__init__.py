@@ -16,9 +16,11 @@ def create_app(config=None):
     db.init_app(app)
 
     from app.routes.main import bp as main_bp
+    from app.routes.dashboard import bp as dashboard_bp
     from app.routes.products import bp as products_bp
     from app.routes.sales import bp as sales_bp
     app.register_blueprint(main_bp)
+    app.register_blueprint(dashboard_bp)
     app.register_blueprint(products_bp)
     app.register_blueprint(sales_bp)
 
