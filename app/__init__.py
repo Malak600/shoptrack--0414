@@ -16,12 +16,14 @@ def create_app(config=None):
     db.init_app(app)
 
     from app.routes.main import bp as main_bp
+    from app.routes.products import bp as products_bp
     from app.routes.sales import bp as sales_bp
     app.register_blueprint(main_bp)
+    app.register_blueprint(products_bp)
     app.register_blueprint(sales_bp)
 
     with app.app_context():
-        from app.models import product, sale  # noqa: F401  (register the models)
+        from app.models import product, sale, stock_movement  # noqa: F401  (register the models)
         db.create_all()
 
     return app
