@@ -1,0 +1,8 @@
+{{ "Edit product" if product else "Add product" }}
+{% with messages = get_flashed_messages(with_categories=true) %} {% for category, message in messages %}
+{{ message }}
+{% endfor %} {% endwith %}
+Name
+{{ form.get('name') or (product.name if product else '') }}
+Price
+Reorder level (alert when stock falls to this)
