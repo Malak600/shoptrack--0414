@@ -12,7 +12,11 @@
             <h1 class="h3 mb-0">Products and stock</h1>
             <div>
                 <a href="{{ url_for('sales.index') }}" class="btn btn-outline-secondary btn-sm">Sales</a>
+                {% if g.user and g.user.is_owner %}
+                <a href="{{ url_for('dashboard.index') }}" class="btn btn-outline-secondary btn-sm">Dashboard</a>
                 <a href="{{ url_for('products.new') }}" class="btn btn-primary btn-sm">Add product</a>
+                {% endif %}
+                <a href="{{ url_for('auth.logout') }}" class="btn btn-link btn-sm">Sign out</a>
             </div>
         </div>
 
@@ -41,7 +45,7 @@
                             <button class="btn btn-success btn-sm">Add</button>
                         </form>
                     </td>
-                    <td><a href="{{ url_for('products.edit', product_id=p.id) }}" class="btn btn-link btn-sm">Edit</a></td>
+                    <td>{% if g.user and g.user.is_owner %}<a href="{{ url_for('products.edit', product_id=p.id) }}" class="btn btn-link btn-sm">Edit</a>{% endif %}</td>
                 </tr>
             {% endfor %}
             </tbody>
