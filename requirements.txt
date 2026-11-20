@@ -2,3 +2,5 @@ Flask==3.0.3
 Flask-SQLAlchemy==3.1.1
 pytest==8.3.3
 matplotlib>=3.8
+rdflib>=7.0
+pyshacl>=0.26
