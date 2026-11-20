@@ -4,7 +4,7 @@
  "stage": "proposal",
  "stageLabel": "Proposal",
  "stageFills": "The plan: who the system is for, what it will do, how it will be built and checked, and who does what. Nothing is implemented yet: the Delivery and evidence part stays empty.",
- "saved": "2026-11-17T17:27:13.303Z",
+ "saved": "2026-11-20T12:16:11.002Z",
  "proposal": {
   "course": "SEN0414",
   "semester": "2026-2027 Fall",
@@ -749,6 +749,20 @@
     "ref": "",
     "prev": "d3bf7ef3647f5c439612b306db6384c00b1511fd3d85033c67c458d260c94396",
     "hash": "2e129763a55283788bbaebe562f861bba7cc25bbd62f72d301b32f60c4839bbe"
+   },
+   {
+    "seq": 11,
+    "ts": "2026-11-20T12:16:08.115Z",
+    "member": "Raghd Alfakavi",
+    "process": "P07",
+    "story": "S7",
+    "hours": 2,
+    "description": "Added CSV import with SHACL validation, line-level error report and JSON-LD export of products",
+    "evidence": "https://github.com/Malak600/shoptrack--0414/commits/main",
+    "kind": "work",
+    "ref": "",
+    "prev": "2e129763a55283788bbaebe562f861bba7cc25bbd62f72d301b32f60c4839bbe",
+    "hash": "7d0583fb0970ee05f7ab0597a370a21994251e79597dae616946ca11a68e723d"
    }
   ],
   "repo": "https://github.com/Malak600/shoptrack--0414",

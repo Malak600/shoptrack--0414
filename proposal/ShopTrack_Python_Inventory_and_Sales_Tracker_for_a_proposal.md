@@ -33,7 +33,7 @@ SEN0414 Advanced Programming · 2026-2027 Fall · Proposal · Method: BRSF softw
 
 ### Work log
 
-10 entries; chain intact; head fingerprint 2e129763a55283788bbaebe562f861bba7cc25bbd62f72d301b32f60c4839bbe.
+11 entries; chain intact; head fingerprint 7d0583fb0970ee05f7ab0597a370a21994251e79597dae616946ca11a68e723d.
 
 | No. | Time (UTC) | Member | Process | Hours | What | Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -47,6 +47,7 @@ SEN0414 Advanced Programming · 2026-2027 Fall · Proposal · Method: BRSF softw
 | 8 | 2026-11-17 16:36 | Raghd Alfakavi | Implementation | 1 | Built the sales recording page, sale service and CSV export of sales with tests | https://github.com/Malak600/shoptrack--0414/commits/main |
 | 9 | 2026-11-17 16:49 | Malak Alfakavi | Implementation | 1 | Added the dashboard with weekly sales total, daily chart, top products and low-stock alerts | Added the dashboard with weekly sales total, daily chart, top products and low-stock alerts |
 | 10 | 2026-11-17 17:25 | Malak Alfakavi | Implementation | 2 | Added sign-in with owner and staff roles, password hashing and permission tests | https://github.com/Malak600/shoptrack--0414/commits/main |
+| 11 | 2026-11-20 12:16 | Raghd Alfakavi | Implementation | 2 | Added CSV import with SHACL validation, line-level error report and JSON-LD export of products | https://github.com/Malak600/shoptrack--0414/commits/main |
 
 ## 1. Mission
 
