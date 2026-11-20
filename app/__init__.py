@@ -18,6 +18,7 @@ def create_app(config=None):
     from app.auth import bp as auth_bp, require_login_for_blueprint
     from app.routes.main import bp as main_bp
     from app.routes.dashboard import bp as dashboard_bp
+    from app.routes.data import bp as data_bp
     from app.routes.products import bp as products_bp
     from app.routes.sales import bp as sales_bp
     # every sales page needs a signed-in user (staff and owner may both sell)
@@ -25,6 +26,7 @@ def create_app(config=None):
     app.register_blueprint(auth_bp)
     app.register_blueprint(main_bp)
     app.register_blueprint(dashboard_bp)
+    app.register_blueprint(data_bp)
     app.register_blueprint(products_bp)
     app.register_blueprint(sales_bp)
 
